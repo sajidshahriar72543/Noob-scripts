@@ -4,6 +4,7 @@
 
 echo Hello User!!
 echo Tell me your directory name.
+cd ~
 read dirname
 mkdir $dirname
 echo Done making directory.
