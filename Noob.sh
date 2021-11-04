@@ -11,7 +11,7 @@ echo Done making directory.
 cd $dirname
 echo Done changing directory.
 echo Now time to init the repo.
-echo Tell me your repo link (the link to initialize).
+echo Tell me your repo link "the link to initialize".
 read repoinit
 echo What branch you want to use?
 read branch
