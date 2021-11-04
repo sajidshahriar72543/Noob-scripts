@@ -29,21 +29,41 @@ read device
 
 #cloning other stuffs
 echo Now time to clone other stuffs.
-echo Tell me the link to the kernel with the directory. DEMO LINK: git clone -b lineage-18.1 https://github.com/LineageOS/android_kernel_xiaomi_sdm845 kernel/xiaomi/sdm845
-read kernel
-git clone $kernel
+echo Tell me the link to the kernel with the directory.
+echo Kernel repo link:
+read kernelrepo
+echo What branch?
+read kernelbranch
+echo What directory?
+read kerneltarget
+git clone -b $kernelbranch $kernelrepo $kerneltarget
 echo Done cloning kernel.
-echo Tell me the link to the vendor with the directory. DEMO LINK: git clone -b lineage-18.1 https://github.com/LineageOS/vendor_xiaomi vendor/xiaomi
-read vendor
-git clone $vendor
+echo Tell me the link to the vendor with the directory.
+echo Vendor repo link:
+read vendorrepo
+echo What branch?
+read vendorbranch
+echo What directory?
+read vendortarget
+git clone -b $vendorbranch $vendorrepo $vendortarget
 echo Done cloning vendor.
-echo Tell me the link to the device tree and the directory. DEMO LINK: git clone -b lineage-18.1 https://github.com/LineageOS/android_device_xiaomi_beryllium device/xiaomi/beryllium
-read device_tree
-git clone $device_tree
+echo Tell me the link to the device tree and the directory.
+echo DT repo link:
+read dtrepo
+echo What branch?
+read dtbranch
+echo What directory?
+read dttarget
+git clone -b $dtbranch $dtrepo $dttarget
 echo Done cloning device tree.
-echo Tell me the link to the COMMON device tree and the directory. DEMO LINK: git clone -b lineage-18.1 https://github.com/LineageOS/android_device_xiaomi_sdm845-common device/xiaomi/sdm845-common
-read device_tree_common
-git clone $device_tree_common
+echo Tell me the link to the COMMON device tree and the directory.
+echo COMMON repo link:
+read commonrepo
+echo What branch?
+read commonbranch
+echo What directory?
+read commontarget
+git clone -b $commonbranch $commonrepo $commontarget
 echo Done cloning device tree common.
 
 # Building the rom
