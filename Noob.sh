@@ -23,8 +23,10 @@ read jobs
 repo sync -c -j$jobs --force-sync --no-clone-bundle --no-tags -v
 echo Done syncing repo.
 echo Now time to build the device.
-echo Tell me the device name and brand.
+echo Tell me the brand and device code_name.
+echo brand name:
 read brand
+echo device code_name:
 read device
 
 #cloning other stuffs
