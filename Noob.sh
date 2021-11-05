@@ -68,22 +68,24 @@ read commontarget
 git clone -b $commonbranch $commonrepo $commontarget
 echo Done cloning device tree common.
 
+echo Done cloning other stuffs. Now please do bringup and build. Automated building is wip.
+
 # Building the rom
 
-echo Now time to build the ROM.
-echo Tell me the Rom name.
-read rom
-echo What is your device codename?
-read codename
-. build/envsetup.sh
-lunch $rom_$codename-userdebug
-echo You want clean build or dirty build?
-echo press 1 for clean build and 2 for dirty build.
-if [ $1 = 1 ]
-then
-make installclean
-mka bacon
-else
-mka bacon
-fi
+# echo Now time to build the ROM.
+# echo Tell me the Rom name.
+# read rom
+# echo What is your device codename?
+# read codename
+# . build/envsetup.sh
+# lunch $rom_$codename-userdebug
+# echo You want clean build or dirty build?
+# echo press 1 for clean build and 2 for dirty build.
+# if [ $1 = 1 ]
+# then
+# make installclean
+# mka bacon
+# else
+# mka bacon
+# fi
 
